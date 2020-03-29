@@ -23,11 +23,13 @@ def second_anagram?(str1, str2)
 end
 
 # Phase III
+# I believe this has a time complexity of O(n^3)
 def third_anagram?(str1, str2)
     str1.split("").sort!.join() == str2.split("").sort!.join()
 end
 
 # Phase IV
+# I believe the time complexity of this one is just O(n) --> 2n which simplifies to n
 def fourth_anagram?(str1, str2)
     h1 = Hash.new(0)
     h2 = Hash.new(0)
