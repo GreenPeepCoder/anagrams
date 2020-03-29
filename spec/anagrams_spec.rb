@@ -10,9 +10,27 @@ describe "#get_perms" do
     end
 
 end
+
 describe "#first_anagram?" do
     it 'should check if the second string is an anagram of the first string' do
         expect(first_anagram?("gizmo", "sally")).to be(false)
         expect(first_anagram?("elvis", "lives")).to be(true)
     end
+end
+
+describe "#second_anagram?" do
+    it 'should return false if the strings being compared arent the same length' do
+        expect(second_anagram?("dogs", "god")).to be(false)
+    end
+
+    it 'should return true if the two words are anagrams' do
+        expect(second_anagram?("elvis", "lives")).to be(true)
+        expect(second_anagram?("gizmo", "sally")).to be(false)
+    end
+end
+
+describe "#third_anagram?" do
+end
+
+describe "#fourth_anagram?" do
 end
